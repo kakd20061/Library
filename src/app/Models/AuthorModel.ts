@@ -3,4 +3,5 @@ export interface Author {
     href: string;
     name: string;
     slug: string;
+    id: number;
 }
