@@ -10,13 +10,18 @@ import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { BooksKindComponent } from './books-kind/books-kind.component';
+import { BooksGenreComponent } from './books-genre/books-genre.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AuthorsComponent,
     AuthorDetailsComponent,
     BooksComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    BooksKindComponent,
+    BooksGenreComponent
   ],
   imports: [
     BrowserModule,
