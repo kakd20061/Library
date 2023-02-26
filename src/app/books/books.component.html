@@ -1,0 +1,7 @@
+<ul *ngFor="let item of bookList">
+    <li>
+        <a routerLink="/book-details/{{item.slug}}">{{item.title}}</a>
+        <img style="width:100px" src="https://wolnelektury.pl/media/{{item.cover}}">
+    </li>
+</ul>
+
