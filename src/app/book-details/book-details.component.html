@@ -1,1 +1,69 @@
-<a href="{{bookDetails.pdf}}" target="_blank">{{bookDetails.title}}</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" routerLink="/">
+          <img
+            src="../../assets/logo_transparent.png"
+            width="70px"
+            alt="Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/">Authors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/books/{{authorName}}">Books</a>
+              </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+    </div>
+</nav>
+<div class="w-100 d-flex justify-content-center mt-5">
+    <div class="card mb-3" style="max-width: 900px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://wolnelektury.pl/media/book/cover/{{bookTitle}}.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h1 class="card-title">{{bookDetails.title}}</h1>
+              <hr/>
+              <p class="card-text">Genre: {{genreName}}</p>
+              <p class="card-text">Kind: {{kindName}}</p>
+              <p class="card-text">Epoch: {{epochName}}</p>
+              <hr/>
+              <div class="row">
+                <div class="col">
+                    <a href="{{bookDetails.pdf}}" target="_blank" class="btn btn-success mb-3">Open PDF <i class="fa-solid fa-download"></i></a>
+                </div>
+                <div class="col p-2">
+                        <p *ngIf="bookDetails.language == 'eng'" class="card-text"><small class="text-muted">Language: English</small></p>
+                        <p *ngIf="bookDetails.language == 'lit'" class="card-text"><small class="text-muted">Language: Lietuvių</small></p>
+                        <p *ngIf="bookDetails.language == 'pol'" class="card-text"><small class="text-muted">Language: Polski</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+</div>

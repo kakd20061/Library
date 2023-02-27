@@ -6,10 +6,12 @@ import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BooksKindComponent } from './books-kind/books-kind.component';
 import { BooksGenreComponent } from './books-genre/books-genre.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/authors', pathMatch: 'full' },
   { path: 'authors', component: AuthorsComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'details/:slug', component: AuthorDetailsComponent },
   { path: 'book-details/:book_details_slug', component: BookDetailsComponent },
   { path: 'books/:book_slug', component: BooksComponent },

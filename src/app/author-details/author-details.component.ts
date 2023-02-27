@@ -12,7 +12,7 @@ import { AuthorDetails } from '../Models/AuthorDetailsModel';
 })
 export class AuthorDetailsComponent {
   //zeby nie inicjowac jest declare
-  declare authorDetails: AuthorDetails;
+  authorDetails: AuthorDetails = {} as AuthorDetails;
 
   constructor(private _apiService:ApiService, private route: ActivatedRoute){}
 

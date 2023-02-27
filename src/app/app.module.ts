@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { BooksKindComponent } from './books-kind/books-kind.component';
 import { BooksGenreComponent } from './books-genre/books-genre.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BooksGenreComponent } from './books-genre/books-genre.component';
     BooksComponent,
     BookDetailsComponent,
     BooksKindComponent,
-    BooksGenreComponent
+    BooksGenreComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
